@@ -1,9 +1,10 @@
 const photosFetch = new FetchPhoto();
+const ui = new UI();
 
 const init = async() => {
     const photos = await photosFetch.fetchPhotos();
 
-    console.log(photos);
+    ui.displayImages(photos);
 };
 
 // Initializing the Phots App

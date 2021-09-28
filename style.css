@@ -40,7 +40,7 @@ Variables
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
     --transition: all 0.3s linear;
-    --spacing: 0.25rem;
+    --spacing: 4px;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -58,13 +58,13 @@ body {
     background: var(--clr-grey-10);
     color: var(--clr-grey-1);
     line-height: 1.5;
-    font-size: 0.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     letter-spacing: 3px;
     font-size: 16px;
+    /* width: 100vw; */
 }
 
 .container {
@@ -75,6 +75,11 @@ body {
     align-items: center;
 }
 
+.heading {
+    font-size: 1.8rem;
+    letter-spacing: var(--spacing);
+}
+
 .underline {
     width: 50px;
     height: 4px;
@@ -83,12 +88,61 @@ body {
 }
 
 .center {
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
-#input-kural {
+#photoImg {
     padding: 5px;
     width: 200px;
     margin-right: .51rem;
     font-family: inherit;
+    font-size: .8rem;
+    border-radius: 4px;
+    border: none;
+    letter-spacing: var(--spacing);
+}
+
+.btn {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--clr-primary-7);
+    color: var(--clr-grey-1);
+    font-family: inherit;
+    font-size: .8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+}
+
+.photos-section {
+    /* width: 90%; */
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card p {
+    font-size: .91rem;
+}
+
+img {
+    width: 285px;
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .photos-section {
+        width: 90%;
+        padding: 1rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
 }
