@@ -9,3 +9,16 @@ const init = async() => {
 
 // Initializing the Phots App
 init();
+
+const handleSubmit = async(e) => {
+    e.preventDefault();
+
+    const inpValue = document.getElementById("photoImg").value;
+
+    const newPhotos = await photosFetch.findPhotos(inpValue);
+    console.log(newPhotos);
+    ui.displayImages(newPhotos);
+};
+const submitBtn = document.querySelector(".submit-btn");
+
+submitBtn.addEventListener("click", handleSubmit);

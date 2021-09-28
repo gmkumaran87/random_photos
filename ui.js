@@ -5,7 +5,6 @@ class UI {
     }
 
     displayImages(records) {
-        console.log(records);
         this.cards.innerHTML = "";
         records.forEach((el) => {
             this.cards.append(this.generateCards(el));
