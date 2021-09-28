@@ -98,7 +98,7 @@ body {
     font-family: inherit;
     font-size: .8rem;
     border-radius: 4px;
-    border: 1px solid var(--clr-primary-5);
+    border: 2px solid var(--clr-primary-5);
     letter-spacing: var(--spacing);
 }
 
