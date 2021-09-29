@@ -14,7 +14,7 @@ class UI {
     generateCards(obj) {
         const card = document.createElement("article");
         card.classList.add("card");
-        card.innerHTML = `<img class="img-id" src ="${obj.urls.regular}" alt="${obj.alt_description}">
+        card.innerHTML = `<a href="${obj.urls.regular}" target="_blank"><img class="img-id" src ="${obj.urls.regular}" alt="${obj.alt_description}"></a>
                         <p class="name">Photographer: <span class="p-name">${obj.user.name}</span></p>
                         <p class="likes"> Likes: <span class="p-likes">${obj.likes}</span></p>`;
         return card;
